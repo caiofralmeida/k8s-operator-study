@@ -1,0 +1,6 @@
+apiVersion: webstatic.caiofralmeida.github.io/v1alpha1
+kind: MarkdownContent
+metadata:
+  name: markdowncontent-sample
+spec:
+  # TODO(user): Add fields here

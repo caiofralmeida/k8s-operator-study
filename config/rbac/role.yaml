@@ -1,0 +1,59 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - markdowncontents
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - markdowncontents/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - markdowncontents/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - webpages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - webpages/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - webpages/status
+  verbs:
+  - get
+  - patch
+  - update

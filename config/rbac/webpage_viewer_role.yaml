@@ -1,0 +1,20 @@
+# permissions for end users to view webpages.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: webpage-viewer-role
+rules:
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - webpages
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - webpages/status
+  verbs:
+  - get

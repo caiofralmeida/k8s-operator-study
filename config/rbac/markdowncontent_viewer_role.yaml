@@ -1,0 +1,20 @@
+# permissions for end users to view markdowncontents.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: markdowncontent-viewer-role
+rules:
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - markdowncontents
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - webstatic.caiofralmeida.github.io
+  resources:
+  - markdowncontents/status
+  verbs:
+  - get
